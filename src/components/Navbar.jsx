@@ -8,14 +8,14 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={logo} alt="hoobank" className="w-[194px] h-[50px]" />
+    <nav className="w-full flex py-6 justify-between items-center navbar bg-black" >
+      <img src={logo} alt="zoominfo" className="w-[194px] h-[50px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[19px] ${
+            className={`font-poppins font-normal cursor-pointer text-[19px] hover:text-secondary transition-all ease-in-out duration-300 ${
               active === nav.title ? "text-white" : "text-dimWhite"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
@@ -25,11 +25,11 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden bg-black flex flex-1 justify-end items-center"> 
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain cursor-pointer"
+          className="w-[28px] h-[28px] object-contain cursor-pointer "
           onClick={() => setToggle(!toggle)}
         />
 

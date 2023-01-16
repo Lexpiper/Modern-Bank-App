@@ -1,4 +1,5 @@
 import styles from "./style";
+import AOS from 'aos';
 import {
   Navbar,
   Hero,
@@ -13,6 +14,7 @@ import {
 } from "./components";
 
 const App = () => {
+  AOS.init({ easing: 'ease', duration: 1000,mirror: false, animatedClassName: 'aos-animate',throttleDelay: 99,anchorPlacement: 'top-bottom',});
   return (
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexStart}`}>
@@ -25,7 +27,7 @@ const App = () => {
         <div className={`${styles.boxWidth}`}>
           <Hero />
         </div>
-      </div>
+      </div>  
 
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth} `}>

@@ -4,6 +4,7 @@ import Button from "./Button";
 
 const FeatureCard = ({ icon, title, content, index }) => (
   <div
+
     className={`flex flex-row p-6 rounded-[20px] ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
     } feature-card`}
@@ -27,7 +28,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 const Business = () => {
   return (
     <section className={layout.section} id="Features">
-      <div className={`${layout.sectionInfo} ${styles.padding}`}>
+      <div data-aos="fade-in" className={`${layout.sectionInfo} ${styles.padding}`}>
         <h2 className={styles.heading2}>
           you do the business, <br className="sm:block hidden" />
           we'll handle the money.
@@ -40,7 +41,7 @@ const Business = () => {
         <Button styles="mt-10" />
       </div>
 
-      <div className={`${layout.sectionImg} flex-col`}>
+      <div data-aos="fade-in" className={`${layout.sectionImg} flex-col`}>
         {features.map((feature, index) => (
           <FeatureCard key={feature.id} {...feature} index={index} />
         ))}

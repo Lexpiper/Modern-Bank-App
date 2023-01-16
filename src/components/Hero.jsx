@@ -45,7 +45,8 @@ const Hero = () => {
       </div>
 
       <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
+      
+        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative animate__animated animate__fadeInRight animate__fast transition-all ease-in-out duration-300`}
       >
         <img
           src={robot}
@@ -54,9 +55,9 @@ const Hero = () => {
         />
 
         {/* gradient start */}
-        <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
-        <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
-        <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
+        <div className="absolute z-[0] w-[5%] h-[5%] top-0  left-0 pink__gradient" />
+        <div className="absolute z-[1] w-[5%] h-[5%] rounded-full white__gradient left-0 " />
+        <div className="absolute z-[0] w-[5%] h-[5%] left=0 bottom-20 blue__gradient" />
         {/* gradient end */}
       </div>
 

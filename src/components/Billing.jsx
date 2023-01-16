@@ -3,6 +3,7 @@ import styles, { layout } from "../style";
 
 const Billing = () => (
   <section
+    data-aos="fade-in"
     id="product"
     className={`${layout.sectionReverse} ${styles.padding} `}
   >
